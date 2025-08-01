@@ -3,6 +3,9 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Provincia $provincia
  */
+
+use chillerlan\QRCode\QRCode;
+
 ?>
 <div class="row">
     <aside class="column">
@@ -14,6 +17,15 @@
             <?= $this->Html->link(__('New Provincia'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
+    <img width="200" height="200" src="<?= $imgSrc ?>" alt="QR Code" />
+    <?php
+
+    //$options = new QRCode;
+    // pr($options);
+    // $text = $this->Qrcode->formatter()->formatText($provincia->Provincia);
+    // echo $this->QrCode->image($text, array()); //$optionalOptions);
+
+    ?>
     <div class="column column-80">
         <div class="provincias view content">
             <h3><?= h($provincia->Provincia) ?></h3>

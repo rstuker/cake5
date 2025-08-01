@@ -3,9 +3,11 @@
  * @var \App\View\AppView $this
  * @var iterable<\App\Model\Entity\Provincia> $provincias
  */
+
+
 ?>
 <div class="provincias index content">
-    <?= $this->Html->link(__('New Provincia'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Neeew Provincia'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Provincias') ?></h3>
     <div class="table-responsive">
         <table>

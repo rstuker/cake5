@@ -27,6 +27,8 @@ use Cake\Http\MiddlewareQueue;
 use Cake\ORM\Locator\TableLocator;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
+use chillerlan\QRCode\Output\QRStringText;
+use chillerlan\QRCode\QRCode;
 
 /**
  * Application setup class.
@@ -54,6 +56,9 @@ class Application extends BaseApplication
                 (new TableLocator())->allowFallbackClass(false)
             );
         }
+
+        // Load the contact manager plugin by class name
+        //$this->addPlugin(QRCode::class);
     }
 
     /**

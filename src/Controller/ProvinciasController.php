@@ -32,8 +32,10 @@ class ProvinciasController extends AppController
      */
     public function view($id = null)
     {
-        $provincia = $this->Provincias->get($id, contain: ['Zonas']);
-        $this->set(compact('provincia'));
+        $provincia = $this->Provincias->get($id, contain: []);
+        $imgSrc = (new \chillerlan\QRCode\QRCode)->render('Buenos Aires');
+
+        $this->set(compact('provincia','imgSrc'));
     }
 
     /**
